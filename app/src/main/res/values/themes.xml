@@ -10,7 +10,6 @@
         <item name="colorSecondaryVariant">@color/colorSecondaryvariant</item>
         <item name="colorOnSecondary">@color/colorOnSecondary</item>
 
-
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
         <!-- Customize your theme here. -->
@@ -22,13 +21,4 @@
         <item name="android:windowBackground">@drawable/splashscreen</item>
         <item name="android:statusBarColor">#1F2D36</item>
     </style>
-
-    <style name="AppTheme.Translucent" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:backgroundDimEnabled">true</item>
-    </style>
-
-
-
 </resources>
