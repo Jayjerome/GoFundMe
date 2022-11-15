@@ -17,6 +17,10 @@
     <color name="colorSecondaryvariant">@color/teal_700</color>
     <color name="colorOnSecondary">@color/white</color>
 
+    <color name="ClickableWords">#039BE5</color>
+    <color name="transparent">@android:color/transparent</color>
+
+
 
 
 

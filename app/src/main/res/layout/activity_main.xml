@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".onboarding.MainActivity">
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -12,8 +13,18 @@
         android:layout_marginTop="100dp"
         android:src="@drawable/piggy_bank" />
 
-    <include
-        layout="@layout/fragment_sign_in"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="250dp"
+        app:behavior_hideable="false">
+
+        <include layout="@layout/item_bottom_sheet"/>
+
+    </FrameLayout>
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
