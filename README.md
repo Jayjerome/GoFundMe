@@ -3,15 +3,15 @@ This project is aimed at creating a platform where users in need of funds can sh
 
 ## 1. Start your fundraiser
 * Sign to the app by providing your information
-* * Name
-* * Email address
-* * Phone number
-* * Location
+  * Name
+  * Email address
+  * Phone number
+  * Location
 * Set your fundraiser goal
-* * Amount
-* * Currency - multi currency
+  * Amount
+  * Currency - multi currency
 * Tell your story
-* * Narrate the reason for fundraise
+  * Narrate the reason for fundraise
 * Add a picture or video
 
 ## 2. Share with friends
