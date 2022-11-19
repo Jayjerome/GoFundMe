@@ -1,5 +1,5 @@
 # GoFundMe Project
-This project is aimed at creating a platform where users in need of funds can share their story as to why they need help from the community and others who feel interested can show support by contributing to the that purpose. GoFundMe is the best place to fundraise, whether you are an individual, group, or organization. The project will comprise of andriod application and backend system to process the requests and data will be stored in Mongo database. The application will have 3 main features as listed below:-
+This project is aimed at creating a platform where users in need of funds can share their story as to why they need help from the community and others who feel interested can show support by contributing to that purpose. GoFundMe is the best place to fundraise, whether you are an individual, group, or organization. The project will comprise of andriod application and backend system to process the requests and data will be stored in Mongo database. The application will have 3 main features as listed below:-
 
 ## 1. Start your fundraiser
 * Sign to the app by providing your information
