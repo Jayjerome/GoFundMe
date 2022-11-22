@@ -13,12 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App.Splash"
         tools:targetApi="31">
+
         <activity
-            android:name=".onboarding.SignIn_LogIn"
-            android:theme="@style/Theme.GoFundMe"
-            android:exported="false" />
-        <activity
-            android:name=".onboarding.MainActivity"
+            android:name=".onboarding.StartOnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".onboarding.SignIn_LogIn"
+            android:theme="@style/Theme.GoFundMe"
+            android:exported="false" />
+        <activity
+            android:name=".dashboard.HomeActivity"
+            android:theme="@style/Theme.GoFundMe"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.gads.crowdfunding.R
-import com.gads.crowdfunding.databinding.ActivityMainBinding
+import com.gads.crowdfunding.databinding.ActivityStartOnBoardingBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class StartOnBoardingActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityStartOnBoardingBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,14 +16,13 @@ class MainActivity : AppCompatActivity() {
 
         setTheme(R.style.Theme_GoFundMe)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_main)
+        binding = ActivityStartOnBoardingBinding.inflate(layoutInflater)
+        setContentView(R.layout.activity_start_on_boarding)
 
         val btnBottomSheet_signIn = findViewById<Button>(R.id.btn_bottomSheet_SingIn)
 
         btnBottomSheet_signIn.setOnClickListener {
             startActivity(Intent(this, SignIn_LogIn::class.java))
         }
-
     }
 }
