@@ -22,7 +22,7 @@
         app:behavior_peekHeight="300dp"
         app:behavior_hideable="false">
 
-        <include layout="@layout/item_bottom_sheet" />
+        <include layout="@layout/item_bottom_sheet_onboarding" />
 
     </FrameLayout>
 

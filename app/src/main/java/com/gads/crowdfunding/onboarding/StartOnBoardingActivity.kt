@@ -17,7 +17,7 @@ class StartOnBoardingActivity : AppCompatActivity() {
         setTheme(R.style.Theme_GoFundMe)
 
         binding = ActivityStartOnBoardingBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_start_on_boarding)
+        setContentView(binding.root)
 
         val btnBottomSheet_signIn = findViewById<Button>(R.id.btn_bottomSheet_SingIn)
 

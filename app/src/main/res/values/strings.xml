@@ -23,4 +23,5 @@
     <string name="days_left"><pre> Days left</pre></string>
     <string name="donate">Donate</string>
     <string name="recent_donors">Recent Donors</string>
+    <string name="amount">amount</string>
 </resources>
