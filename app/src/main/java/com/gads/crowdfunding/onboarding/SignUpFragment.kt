@@ -14,6 +14,10 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentSignUpBinding.bind(view)
 
+        binding.btnSignUp.setOnClickListener {
+            findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
+        }
+
         binding.txtHaveAnAccount.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_logInFragment)
         }

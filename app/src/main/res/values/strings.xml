@@ -18,4 +18,8 @@
     <string name="already_have_an_account">Already have an Account?</string>
     <string name="welcome">Welcome</string>
     <string name="sign_up_image">Sign up image</string>
+    <string name="verification">Verification</string>
+    <string name="verification_code">Verification code</string>
+    <string name="verify">verify</string>
+    <string name="enter_the_code_sent_to_your_email_address">Enter the code sent to your email address</string>
 </resources>
