@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.findNavController
 import com.gads.crowdfunding.R
-import com.gads.crowdfunding.dashboard.HomeActivity
+import com.gads.crowdfunding.dashboard.NavhostHomeActivity
 import com.gads.crowdfunding.databinding.FragmentLogInBinding
 
 
@@ -18,7 +18,7 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
         binding = FragmentLogInBinding.bind(view)
 
         binding.btnLogin.setOnClickListener {
-            startActivity(Intent(view.context, HomeActivity::class.java))
+            startActivity(Intent(view.context, NavhostHomeActivity::class.java))
         }
 
         binding.txtGetAnAccount.setOnClickListener {

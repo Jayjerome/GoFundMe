@@ -63,8 +63,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <AutoCompleteTextView
-            android:labelFor="@+id/edt_fullName"
+        <com.google.android.material.textfield.TextInputEditText
+            android:paddingBottom="20dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:layout_width="match_parent"
@@ -94,12 +94,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edt_fullName">
 
-        <AutoCompleteTextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:paddingBottom="20dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,12 +126,13 @@
         app:layout_constraintTop_toBottomOf="@id/edt_email"
         app:passwordToggleEnabled="true">
 
-        <AutoCompleteTextView
+        <com.google.android.material.textfield.TextInputEditText
+            android:paddingBottom="20dp"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 

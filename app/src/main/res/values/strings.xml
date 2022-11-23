@@ -20,4 +20,7 @@
     <string name="sign_up_image">Sign up image</string>
     <string name="active_fundraising">Active Fundraising</string>
     <string name="your_donation">Your donation</string>
+    <string name="days_left"><pre> Days left</pre></string>
+    <string name="donate">Donate</string>
+    <string name="recent_donors">Recent Donors</string>
 </resources>

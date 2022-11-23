@@ -20,6 +20,8 @@
     <color name="ClickableWords">#039BE5</color>
     <color name="transparent">@android:color/transparent</color>
 
+    <color name="grey">#7F7F7F</color>
+    <color name="crail">#C05041</color>
 
 
 

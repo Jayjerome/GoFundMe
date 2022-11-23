@@ -28,7 +28,7 @@
             android:theme="@style/Theme.GoFundMe"
             android:exported="false" />
         <activity
-            android:name=".dashboard.HomeActivity"
+            android:name=".dashboard.NavhostHomeActivity"
             android:theme="@style/Theme.GoFundMe"
             android:exported="false"/>
 
