@@ -1,4 +1,4 @@
-package com.gads.crowdfunding.dashboard
+package com.gads.crowdfunding.dashboard.recyclerviewadapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

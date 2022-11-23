@@ -6,18 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".dashboard.HomeFragment">
 
+    <LinearLayout
+        android:id="@+id/linearLayout_profile_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="289dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView12"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome_back"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView11"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jerome"
+                android:layout_marginStart="2dp"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView12"
+                app:layout_constraintStart_toEndOf="@+id/appCompatTextView12"
+                app:layout_constraintTop_toTopOf="@+id/appCompatTextView12" />
+
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/frag_home_btn_add_project"
+                android:layout_width="47dp"
+                android:layout_height="43dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/appCompatTextView11"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:text="@string/last_login"
+                android:textColor="@color/grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView12"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textSize="12sp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:text="10:24pm - 12/2/2022"
+                android:textSize="12sp"
+                android:textColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView13"
+                app:layout_constraintStart_toEndOf="@+id/appCompatTextView13"
+                app:layout_constraintTop_toTopOf="@+id/appCompatTextView13"
+                android:layout_marginStart="3dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </LinearLayout>
+
     <com.google.android.material.card.MaterialCardView
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"
         android:layout_height="125dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/colorPrimary"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_profile_view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -54,11 +143,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
+                android:text="$200,000"
                 android:textColor="@color/colorOnPrimary"
                 android:textSize="40sp"
                 app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
-                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3"
-                android:text="$200,000" />
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -80,12 +169,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

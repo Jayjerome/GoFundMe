@@ -24,4 +24,17 @@
     <string name="donate">Donate</string>
     <string name="recent_donors">Recent Donors</string>
     <string name="amount">amount</string>
+    <string name="create_fundme_project">Create FundMe Project</string>
+    <string name="title_purpose_of_the_project">Title / Purpose of the project</string>
+    <string name="description">Description</string>
+    <string name="amount_needed">Amount needed</string>
+    <string name="date_deadline">Date (Deadline)</string>
+    <string name="day">Day</string>
+    <string name="month">Month</string>
+    <string name="welcome_back">Welcome back,</string>
+    <string name="thank_you">Thank you</string>
+    <string name="back_to_home_page">Back to Home Page</string>
+    <string name="profile">Profile</string>
+    <string name="name">Name</string>
+    <string name="last_login">Last login:</string>
 </resources>

@@ -2,17 +2,17 @@ package com.gads.crowdfunding.dashboard
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gads.crowdfunding.R
+import com.gads.crowdfunding.dashboard.recyclerviewadapters.RecyclerViewFundraisingFragAdapter
 import com.gads.crowdfunding.dashboard.recyclerviewtypes.DataManager
 import com.gads.crowdfunding.databinding.FragmentFundraisingBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class FundraisingFragment : Fragment(R.layout.fragment_fundraising){
     private lateinit var binding: FragmentFundraisingBinding
@@ -39,7 +39,13 @@ class FundraisingFragment : Fragment(R.layout.fragment_fundraising){
                     else
                         BottomSheetBehavior.STATE_EXPANDED
                 bottomSheetBehavior.state = state
-            }
+        }
+
+        //Bottom Sheet donate button
+        val addDonation =  view.findViewById<Button>(R.id.btn_add_donation)
+        addDonation.setOnClickListener {
+            findNavController().navigate(R.id.action_fundraisingFragment_to_thankYouFragment)
+        }
 
     }
 
