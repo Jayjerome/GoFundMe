@@ -5,6 +5,7 @@ data class TypeCardViewRV (
     var imageId : Int,
     var title : String,
     var description : String,
-    var progress : Int,
+    var target_amount : Int,
+    var obtained_amount : Int,
     var time_left : Int
 )

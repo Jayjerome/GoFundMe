@@ -14,8 +14,6 @@ class NavhostHomeActivity: AppCompatActivity() {
         binding = ActivityNavHostHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(findViewById<Toolbar>(R.id.navHostHomeActivitytoolbar))
-
     }
 
 }

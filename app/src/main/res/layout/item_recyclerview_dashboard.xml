@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="210dp">
+    android:layout_height="230dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -47,32 +47,88 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"/>
 
-        <androidx.core.widget.ContentLoadingProgressBar
-            android:id="@+id/item_rv_progressbar"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="0dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="10dp"
-            android:max="10"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@+id/item_rv_description"
             app:layout_constraintStart_toStartOf="@+id/item_rv_description"
-            app:layout_constraintTop_toBottomOf="@+id/item_rv_description" />
+            app:layout_constraintTop_toBottomOf="@+id/item_rv_description">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_rv_obtained_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5sp"
+                android:elevation="2dp"
+                android:text="$1500"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_rv_target_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:elevation="2dp"
+                android:text="$5000"
+                android:textColor="@color/colorOnPrimary"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/itemRvProgressbar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:progressDrawable="@drawable/custom_progressbar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/obtained"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/item_rv_obtained_amount"
+                app:layout_constraintStart_toStartOf="@+id/item_rv_obtained_amount"
+                app:layout_constraintTop_toBottomOf="@+id/item_rv_obtained_amount" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/target"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/item_rv_target_amount"
+                app:layout_constraintStart_toStartOf="@+id/item_rv_target_amount"
+                app:layout_constraintTop_toBottomOf="@+id/item_rv_target_amount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/item_rv_time_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@+id/item_rv_progressbar"
-            app:layout_constraintTop_toBottomOf="@+id/item_rv_progressbar"
-            tools:text="2"
             android:textColor="@color/colorPrimary"
-            android:layout_marginTop="10dp"/>
+            app:layout_constraintStart_toStartOf="@id/constraintLayout2"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+            tools:text="2" />
 
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_marginStart="2dp"
+            android:textStyle="bold"
             android:text="@string/days_left"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/item_rv_time_left"

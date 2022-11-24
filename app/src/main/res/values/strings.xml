@@ -37,4 +37,6 @@
     <string name="profile">Profile</string>
     <string name="name">Name</string>
     <string name="last_login">Last login:</string>
+    <string name="obtained">Obtained</string>
+    <string name="target">Target</string>
 </resources>

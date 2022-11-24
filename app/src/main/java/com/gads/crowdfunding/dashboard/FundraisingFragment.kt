@@ -5,9 +5,11 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.gads.crowdfunding.R
 import com.gads.crowdfunding.dashboard.recyclerviewadapters.RecyclerViewFundraisingFragAdapter
 import com.gads.crowdfunding.dashboard.recyclerviewtypes.DataManager
@@ -47,6 +49,39 @@ class FundraisingFragment : Fragment(R.layout.fragment_fundraising){
             findNavController().navigate(R.id.action_fundraisingFragment_to_thankYouFragment)
         }
 
+        binding.backButton.setOnClickListener {
+            findNavController().navigate(R.id.action_fundraisingFragment_to_homeFragment)
+        }
+
+
+        val state  = IntArray(1)
+
+        binding.recyclerViewFragmentFundraising.addOnScrollListener(object :
+            RecyclerView.OnScrollListener(){
+            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                state[0] = newState
+            }
+
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                if(dy > 0 && (state[0] == 0 || state[0] == 2)){
+                    hideToolbar();
+                }else if (dy < -20){
+                    showToolbar()
+                }
+            }
+        })
+
+    }
+
+    private fun hideToolbar() {
+        binding.relativeLayout.isVisible = false
+    }
+
+    private fun showToolbar() {
+        binding.relativeLayout.isVisible = true
     }
 
     private fun setUpBottomSheet(view: View): BottomSheetBehavior<LinearLayout> {

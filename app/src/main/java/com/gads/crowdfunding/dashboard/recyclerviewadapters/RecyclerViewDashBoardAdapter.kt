@@ -41,8 +41,15 @@ class RecyclerViewDashBoardAdapter: RecyclerView.Adapter<RecyclerViewDashBoardAd
             itemRvImageview.setImageResource(card.imageId)
             itemRvTitle.text = card.title
             itemRvDescription.text = card.description
-            itemRvProgressbar.progress = card.progress
+
+            itemRvProgressbar.progress = card.obtained_amount
+            itemRvProgressbar.max = card.target_amount
+
             itemRvTimeLeft.text = card.time_left.toString()
+            itemRvTargetAmount.text = card.target_amount.toString()
+            itemRvObtainedAmount.text = card.obtained_amount.toString()
+
+
         }
 
         holder.binding.itemRvCardView.setOnClickListener {
