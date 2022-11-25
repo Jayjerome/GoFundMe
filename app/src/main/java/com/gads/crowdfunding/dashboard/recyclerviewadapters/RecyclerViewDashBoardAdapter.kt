@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.gads.crowdfunding.R
+import com.gads.crowdfunding.dashboard.HomeFragmentDirections
 import com.gads.crowdfunding.dashboard.recyclerviewtypes.TypeCardViewRV
 import com.gads.crowdfunding.databinding.ItemRecyclerviewDashboardBinding
 
@@ -53,7 +54,8 @@ class RecyclerViewDashBoardAdapter: RecyclerView.Adapter<RecyclerViewDashBoardAd
         }
 
         holder.binding.itemRvCardView.setOnClickListener {
-            findNavController(it).navigate(R.id.action_homeFragment_to_fundraisingFragment)
+            findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToFundraisingFragment(position))
+
         }
 
     }
