@@ -39,4 +39,5 @@
     <string name="last_login">Last login:</string>
     <string name="obtained">Obtained</string>
     <string name="target">Target</string>
+    <string name="create_new_project">Create new project</string>
 </resources>
