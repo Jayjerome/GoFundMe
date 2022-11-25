@@ -33,6 +33,7 @@
         android:id="@+id/appCompatImageView"
         android:layout_width="300dp"
         android:layout_height="250dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/verification_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -68,12 +69,13 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="@string/verify"
         android:textColor="@color/colorOnPrimary"
         android:textAllCaps="false"
+        app:cornerRadius="10dp"
         android:layout_marginBottom="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
