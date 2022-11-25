@@ -43,8 +43,11 @@ class RecyclerViewDashBoardAdapter: RecyclerView.Adapter<RecyclerViewDashBoardAd
             itemRvTitle.text = card.title
             itemRvDescription.text = card.description
 
-            itemRvProgressbar.progress = card.obtained_amount
-            itemRvProgressbar.max = card.target_amount
+
+            itemRvProgressbar.apply{
+                setProgress(card.obtained_amount)
+                max = card.target_amount
+            }
 
             itemRvTimeLeft.text = card.time_left.toString()
             itemRvTargetAmount.text = card.target_amount.toString()
