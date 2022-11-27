@@ -2,12 +2,15 @@ package com.gads.crowdfunding.dashboard.recyclerviewtypes
 
 import com.gads.crowdfunding.R
 
+//Sample data to fill the recycler View
 object DataManager {
 
 
      val cards  =  ArrayList<TypeCardViewRV>()
 
     val itemFundraising = ArrayList<TypeItemFundraising>()
+
+    val projects = ArrayList<TypeItemProjects>()
 
 
      fun initializeCards(): ArrayList<TypeCardViewRV> {
@@ -106,6 +109,62 @@ object DataManager {
 
 
         return itemFundraising
+    }
+
+    fun initializeProjects(): List<TypeItemProjects>{
+
+        projects.add(0, TypeItemProjects(0,
+            R.drawable.example_image,
+            "Urgently - needed",
+            "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
+            35000,
+            20000,
+            3,
+        true)
+        )
+        projects.add(1, TypeItemProjects(1,
+            R.drawable.example_image,
+            "Urgently - needed",
+            "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
+            35000,
+            20000,
+            3,
+            false
+        )
+        )
+        projects.add(2, TypeItemProjects(2,
+            R.drawable.example_image,
+            "Urgently - needed",
+            "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
+
+            35000,
+            20000,
+            3,
+            true
+        )
+        )
+        projects.add(3, TypeItemProjects(3,
+            R.drawable.example_image,
+            "Urgently - needed",
+            "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
+            35000,
+            20000,
+            3,
+            false
+        )
+        )
+        projects.add(4, TypeItemProjects(4,
+            R.drawable.example_image,
+            "Urgently - needed",
+            "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
+            35000,
+            20000,
+            3,
+            true
+        )
+        )
+
+        return projects
     }
 }
 

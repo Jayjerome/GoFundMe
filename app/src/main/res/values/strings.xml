@@ -40,4 +40,10 @@
     <string name="obtained">Obtained</string>
     <string name="target">Target</string>
     <string name="create_new_project">Create new project</string>
+    <string name="enter_the_details_of_the_project">Enter the details of the project</string>
+    <string name="create_project">Create project</string>
+    <string name="profile_fab">Update profile</string>
+    <string name="your_projects">Your projects</string>
+    <string name="thank_you_for_your_contribution">Thank you for your contribution</string>
+    <string name="open">Open</string>
 </resources>

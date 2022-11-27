@@ -56,6 +56,7 @@ class RecyclerViewDashBoardAdapter: RecyclerView.Adapter<RecyclerViewDashBoardAd
 
         }
 
+        //Starting the fundraising Fragment and passing the current position clicked on the recycler View
         holder.binding.itemRvCardView.setOnClickListener {
             findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToFundraisingFragment(position))
 
