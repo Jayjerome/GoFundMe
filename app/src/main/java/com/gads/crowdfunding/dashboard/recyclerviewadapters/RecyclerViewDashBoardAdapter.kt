@@ -45,7 +45,7 @@ class RecyclerViewDashBoardAdapter: RecyclerView.Adapter<RecyclerViewDashBoardAd
 
 
             itemRvProgressbar.apply{
-                setProgress(card.obtained_amount)
+                progress = card.obtained_amount
                 max = card.target_amount
             }
 

@@ -1,5 +1,6 @@
 package com.gads.crowdfunding.dashboard.recyclerviewadapters
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -11,26 +12,37 @@ import com.gads.crowdfunding.databinding.ItemRecyclerviewProjectsBinding
 
 
 class RecyclerViewProjectsAdapter : RecyclerView.Adapter<RecyclerViewProjectsAdapter.ViewHolder>() {
-    inner class ViewHolder(val binding: ItemRecyclerviewProjectsBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class ViewHolder(val binding: ItemRecyclerviewProjectsBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    private val diffCallback = object : DiffUtil.ItemCallback<TypeItemProjects>(){
-        override fun areItemsTheSame(oldItem: TypeItemProjects, newItem: TypeItemProjects): Boolean = (oldItem.id == newItem.id)
+    private val diffCallback = object : DiffUtil.ItemCallback<TypeItemProjects>() {
+        override fun areItemsTheSame(
+            oldItem: TypeItemProjects,
+            newItem: TypeItemProjects
+        ): Boolean = (oldItem.id == newItem.id)
 
-        override fun areContentsTheSame(oldItem: TypeItemProjects, newItem: TypeItemProjects): Boolean = (oldItem == newItem)
+        override fun areContentsTheSame(
+            oldItem: TypeItemProjects,
+            newItem: TypeItemProjects
+        ): Boolean = (oldItem == newItem)
     }
 
     private val differ = AsyncListDiffer(this, diffCallback)
 
-    var projects : List<TypeItemProjects>
+    var projects: List<TypeItemProjects>
         get() = differ.currentList
-        set(value) { differ.submitList(value)}
+        set(value) {
+            differ.submitList(value)
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemRecyclerviewProjectsBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        ))
+        return ViewHolder(
+            ItemRecyclerviewProjectsBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun getItemCount(): Int = projects.size
@@ -45,7 +57,7 @@ class RecyclerViewProjectsAdapter : RecyclerView.Adapter<RecyclerViewProjectsAda
             itemRvDescription.text = project.description
 
 
-            itemRvProgressbar.apply{
+            itemRvProgressbar.apply {
                 progress = project.obtained_amount
                 max = project.target_amount
             }
@@ -53,22 +65,30 @@ class RecyclerViewProjectsAdapter : RecyclerView.Adapter<RecyclerViewProjectsAda
             itemRvTimeLeft.text = project.time_left.toString()
             itemRvTargetAmount.text = project.target_amount.toString()
             itemRvObtainedAmount.text = project.obtained_amount.toString()
-            itemRvBtnProjectStatus.text = when(project.projectStatus){
-                        true -> "Open"
-                        else -> "Closed"
-            }
-        }
+            itemRvBtnProjectStatus.apply {
 
-        holder.binding.itemRvBtnProjectStatus.setOnClickListener {
-            when(project.projectStatus){
-                true -> holder.binding.itemRvBtnProjectStatus.apply{
-                    text = "Closed"
-                    setBackgroundColor(resources.getColor(R.color.crail))
+                text = when (project.projectStatus) {
+                    true -> "Open"
+                    else -> "Closed"
                 }
+                val color: Int = when (project.projectStatus) {
+                    true -> resources.getColor(R.color.colorPrimary)
+                    false -> resources.getColor(R.color.crail)
+                }
+                setBackgroundColor(color)
+            }
 
-                false -> holder.binding.itemRvBtnProjectStatus.apply {
-                        text = "Open"
+            holder.binding.itemRvBtnProjectStatus.setOnClickListener {
+                when (project.projectStatus) {
+                    true -> holder.binding.itemRvBtnProjectStatus.apply {
+                        text = resources.getString(R.string.close)
+                        setBackgroundColor(resources.getColor(R.color.crail))
+                    }
+
+                    else -> holder.binding.itemRvBtnProjectStatus.apply {
+                        text = resources.getString(R.string.open)
                         setBackgroundColor(resources.getColor(R.color.colorPrimary))
+                    }
                 }
             }
         }

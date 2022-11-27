@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".onboarding.LogInFragment">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="250dp"
         android:layout_height="200dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="150dp"
         android:contentDescription="@string/log_in_image"
         android:src="@drawable/log_in_drawable"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"

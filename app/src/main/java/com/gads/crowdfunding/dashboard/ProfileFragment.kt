@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gads.crowdfunding.R
+import com.gads.crowdfunding.dashboard.dialogfragments.UpdateProfileDialog
 import com.gads.crowdfunding.dashboard.recyclerviewadapters.RecyclerViewProjectsAdapter
 import com.gads.crowdfunding.dashboard.recyclerviewtypes.DataManager
 import com.gads.crowdfunding.databinding.FragmentProfileBinding
@@ -23,6 +24,10 @@ class ProfileFragment : Fragment(R.layout.fragment_profile){
         }
 
         setUpRecyclerView()
+
+        binding.updateProfile.setOnClickListener {
+            UpdateProfileDialog().show(parentFragmentManager, "Update profile ")
+        }
     }
 
     private fun setUpRecyclerView() {

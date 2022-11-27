@@ -46,4 +46,5 @@
     <string name="your_projects">Your projects</string>
     <string name="thank_you_for_your_contribution">Thank you for your contribution</string>
     <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

@@ -9,9 +9,9 @@
 
     <ImageView
         android:layout_width="600dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="40dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="250dp"
+        android:layout_gravity="center_horizontal"
         android:contentDescription="@string/piggy_bank"
         android:src="@drawable/piggy_bank" />
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-        app:behavior_peekHeight="300dp"
+        app:behavior_peekHeight="220dp"
         app:behavior_hideable="false">
 
         <include layout="@layout/item_bottom_sheet_onboarding" />
