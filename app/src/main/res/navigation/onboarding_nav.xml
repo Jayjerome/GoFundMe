@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_signUpFragment_to_logInFragment"
             app:destination="@id/logInFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_verificationFragment"
+            app:destination="@id/verificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/logInFragment"
@@ -20,6 +23,14 @@
         tools:layout="@layout/fragment_log_in" >
         <action
             android:id="@+id/action_logInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationFragment"
+        android:name="com.gads.crowdfunding.onboarding.VerificationFragment"
+        android:label="VerificationFragment" >
+        <action
+            android:id="@+id/action_verificationFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
     </fragment>
 </navigation>
