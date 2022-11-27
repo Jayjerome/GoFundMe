@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
     tools:context=".onboarding.LogInFragment">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="250dp"
         android:layout_height="200dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="150dp"
+        android:contentDescription="@string/log_in_image"
         android:src="@drawable/log_in_drawable"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/log_in_image" />
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/appCompatTextView2"
@@ -45,44 +46,38 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_email"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:hint="@string/edt_hint_email"
         android:inputType="textEmailAddress"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="outline"
-        android:layout_marginTop="20dp"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:paddingBottom="20dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:inputType="textEmailAddress"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_password"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
         android:hint="@string/edt_hint_password"
-        app:passwordToggleEnabled="true"
         android:inputType="textPassword"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="outline"
@@ -90,25 +85,26 @@
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/edt_email"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_email">
+        app:layout_constraintStart_toStartOf="@+id/edt_email"
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:paddingBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:inputType="textPassword"
-            android:textSize="14sp"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
+            android:paddingEnd="10dp"
+            android:paddingBottom="20dp"
+            android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="0dp"
+        android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_marginTop="55dp"
         android:text="@string/login"
@@ -145,6 +141,13 @@
             android:textColor="@color/ClickableWords"
             android:textStyle="italic" />
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

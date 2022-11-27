@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".onboarding.MainActivity">
+    tools:context=".onboarding.StartOnBoardingActivity">
 
 
     <ImageView
@@ -22,7 +22,7 @@
         app:behavior_peekHeight="300dp"
         app:behavior_hideable="false">
 
-        <include layout="@layout/item_bottom_sheet" />
+        <include layout="@layout/item_bottom_sheet_onboarding" />
 
     </FrameLayout>
 

@@ -20,7 +20,11 @@
     <color name="ClickableWords">#039BE5</color>
     <color name="transparent">@android:color/transparent</color>
 
+    <color name="grey">#7F7F7F</color>
+    <color name="crail">#C05041</color>
 
+    <color name="appbar_background">#DAEEFB</color>
+    <color name="floating_text_collapsing_toolbar">#8ED1FA</color>
 
 
 
