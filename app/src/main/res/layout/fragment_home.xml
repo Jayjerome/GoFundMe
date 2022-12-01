@@ -14,8 +14,7 @@
             android:id="@+id/main.appbar"
             android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:fitsSystemWindows="true">
+            android:layout_height="250dp">
 
             <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:id="@+id/main.collapsing"
