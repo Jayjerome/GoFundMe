@@ -64,11 +64,11 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:paddingBottom="20dp"
+            android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:inputType="text"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -95,11 +95,11 @@
         app:layout_constraintTop_toBottomOf="@id/edt_fullName">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:paddingBottom="20dp"
+            android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -127,11 +127,11 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:paddingBottom="20dp"
+            android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>

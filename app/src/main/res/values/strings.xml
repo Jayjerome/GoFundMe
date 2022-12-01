@@ -51,4 +51,14 @@
     <string name="verification_code">Verification code</string>
     <string name="verify">verify</string>
     <string name="enter_the_code_sent_to_your_email_address">Enter the code sent to your email address</string>
+    <string name="project_image">Project image</string>
+    <string name="password">Password</string>
+    <string name="update">Update</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="update_profile">UPDATE PROFILE</string>
+    <string name="username_image">Username Image</string>
+    <string name="email_image">Email image</string>
+    <string name="password_image">Password image</string>
+    <string name="fundraising_image">Fundraising image</string>
 </resources>

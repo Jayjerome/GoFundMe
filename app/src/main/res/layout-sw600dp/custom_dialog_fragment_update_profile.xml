@@ -2,7 +2,6 @@
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -11,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="UPDATE PROFILE"
+        android:text="@string/update_profile"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,10 +24,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="@string/username"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toEndOf="@+id/img_username"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_login"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_email"
@@ -37,22 +37,24 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        app:layout_constraintStart_toEndOf="@+id/img_password"
-        app:layout_constraintTop_toBottomOf="@+id/et_username" />
+        app:layout_constraintStart_toEndOf="@+id/img_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_username"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/et_password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/et_email"
         app:layout_constraintStart_toStartOf="@+id/et_email"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/btn_login"
@@ -60,7 +62,7 @@
         android:layout_height="36dp"
         android:layout_marginBottom="16dp"
         android:background="#2196F3"
-        android:text="Update"
+        android:text="@string/update"
         android:layout_marginTop="20dp"
         android:textColor="@color/colorOnPrimary"
         app:cornerRadius="10dp"
@@ -79,10 +81,11 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_login"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        app:srcCompat="@drawable/ic_baseline_person_24"
+        android:contentDescription="@string/username_image"/>
 
     <ImageView
-        android:id="@+id/img_password"
+        android:id="@+id/img_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -90,16 +93,19 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_username"
-        app:srcCompat="@drawable/ic_baseline_mail_24" />
+        app:srcCompat="@drawable/ic_baseline_mail_24"
+        android:contentDescription="@string/email_image"/>
 
     <ImageView
+        android:id="@+id/img_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_lock_24"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toStartOf="@+id/et_password"
-        app:layout_constraintTop_toTopOf="@+id/et_password" />
+        app:layout_constraintTop_toTopOf="@+id/et_password"
+        android:contentDescription="@string/password_image"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline11"

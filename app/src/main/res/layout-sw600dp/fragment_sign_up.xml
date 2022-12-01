@@ -9,12 +9,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
         android:contentDescription="@string/sign_up_image"
         android:src="@drawable/sign_up_drawable"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,6 +40,7 @@
         android:text="@string/sign_up_to_get_started"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
+        android:id="@+id/textview15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
 
@@ -47,8 +48,8 @@
         android:id="@+id/edt_fullName"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
         android:hint="@string/full_name"
+        android:layout_marginTop="30dp"
         android:inputType="text"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="outline"
@@ -59,15 +60,15 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textview15">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:inputType="text"
+            android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:paddingBottom="20dp"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -92,11 +93,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:paddingBottom="20dp"
+            android:textColor="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -122,11 +123,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:paddingBottom="20dp"
+            android:textColor="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 

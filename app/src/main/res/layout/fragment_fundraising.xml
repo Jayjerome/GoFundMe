@@ -33,11 +33,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:backgroundTint="@color/white"
-                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:src="@drawable/ic_baseline_arrow_back_black_24"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <Button
                     android:id="@+id/frag_fundraising_btn_donate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -76,7 +76,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
-                            <androidx.appcompat.widget.AppCompatImageView
+                            <ImageView
                                 android:id="@+id/imageView_fragment_fundraising"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -84,7 +84,8 @@
                                 android:src="@drawable/example_image3"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                android:contentDescription="@string/fundraising_image" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/tv_time_left"
@@ -220,7 +221,6 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -258,9 +258,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-
-
-
 
     <include layout="@layout/item_bottom_sheet_fundraising" />
 

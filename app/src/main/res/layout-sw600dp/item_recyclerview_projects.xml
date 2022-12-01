@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:text="@string/open"
             android:textColor="@color/colorOnPrimary"
+            android:backgroundTint="@color/colorPrimary"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="@+id/item_rv_title"
             app:layout_constraintStart_toEndOf="@+id/item_rv_title"
