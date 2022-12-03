@@ -3,7 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gads.crowdfunding">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".GoFundMeApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,7 +20,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".onboarding.StartOnBoardingActivity"
+            android:name="com.gads.crowdfunding.presentation.onboarding.StartOnBoardingActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -25,12 +30,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".onboarding.SignIn_LogIn"
+            android:name="com.gads.crowdfunding.presentation.onboarding.SignIn_LogIn"
             android:theme="@style/Theme.GoFundMe"
             android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".dashboard.NavhostHomeActivity"
+            android:name="com.gads.crowdfunding.presentation.dashboard.NavhostHomeActivity"
             android:theme="@style/Theme.GoFundMe"
             android:exported="false"
             android:screenOrientation="portrait"/>
