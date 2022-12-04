@@ -1,5 +1,6 @@
 package com.gads.crowdfunding.presentation.onboarding
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
@@ -8,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.gads.crowdfunding.R
 import com.gads.crowdfunding.databinding.FragmentLogInBinding
 import com.gads.crowdfunding.domain.auth.LoginModel
+import com.gads.crowdfunding.presentation.dashboard.NavhostHomeActivity
 import com.gads.crowdfunding.util.LoadingUtils
 import com.gads.crowdfunding.util.showToast
 import com.gads.crowdfunding.viewmodels.AuthViewModel
@@ -23,6 +25,14 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
 
         binding = FragmentLogInBinding.bind(view)
 
+        viewModel.loginResponseLiveData.observe(viewLifecycleOwner){
+            if(it.success){
+                startActivity(Intent(view.context, NavhostHomeActivity::class.java))
+            }else{
+                LoadingUtils.hideDialog()
+            }
+        }
+
         binding.btnLogin.setOnClickListener {
             if(binding.emailTextInput?.text?.isNotEmpty() == true && binding.passwordTextInput?.text?.isNotEmpty() == true) {
                 LoadingUtils.showDialog(requireContext(), false)
@@ -35,7 +45,6 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
             }else{
                 showToast("Missing email or password", requireContext())
             }
-//            startActivity(Intent(view.context, NavhostHomeActivity::class.java))
         }
 
         binding.txtGetAnAccount.setOnClickListener {

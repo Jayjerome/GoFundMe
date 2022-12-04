@@ -6,8 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.gads.crowdfunding.R
 import com.gads.crowdfunding.databinding.FragmentSignUpBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SignUpFragment : Fragment(R.layout.fragment_sign_up){
     private lateinit var binding: FragmentSignUpBinding
 
