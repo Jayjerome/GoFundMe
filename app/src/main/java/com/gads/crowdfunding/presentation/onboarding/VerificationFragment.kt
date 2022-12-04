@@ -1,13 +1,16 @@
 package com.gads.crowdfunding.onboarding
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.fragment.app.viewModels
 import com.gads.crowdfunding.R
-import com.gads.crowdfunding.dashboard.NavhostHomeActivity
 import com.gads.crowdfunding.databinding.FragmentVerificationBinding
+import com.gads.crowdfunding.presentation.dashboard.NavhostHomeActivity
 import com.gads.crowdfunding.viewmodel.onboardingviewmodel.OnboardingViewModel
 
 class VerificationFragment : Fragment(R.layout.fragment_verification){

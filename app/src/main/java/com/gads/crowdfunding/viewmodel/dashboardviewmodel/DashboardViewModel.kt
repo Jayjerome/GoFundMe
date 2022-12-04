@@ -1,8 +1,6 @@
 package com.gads.crowdfunding.viewmodel.dashboardviewmodel
 
 import androidx.lifecycle.ViewModel
-import com.gads.crowdfunding.dashboard.recyclerviewtypes.TypeItemFundraising
-import com.gads.crowdfunding.dashboard.recyclerviewtypes.TypeItemProjects
 import java.text.DateFormat
 import java.time.format.DateTimeFormatter
 

@@ -27,7 +27,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up){
         //Capture real time info from the user to the view model
         binding.edittextFirstName.doOnTextChanged { text, start, before, count ->  onboardingViewModel.firstName = text.toString()}
         binding.edittextLastName.doOnTextChanged { text, start, before, count -> onboardingViewModel.lastName = text.toString() }
-        binding.editTextEmail.doOnTextChanged { text, start, before, count -> onboardingViewModel.email = text.toString() }
+        binding.emailTextInput.doOnTextChanged { text, start, before, count -> onboardingViewModel.email = text.toString() }
         binding.editTextPassword.doOnTextChanged { text, start, before, count -> onboardingViewModel.password = text.toString() }
 
         binding.btnSignUp.setOnClickListener {
