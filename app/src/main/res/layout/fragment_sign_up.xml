@@ -77,11 +77,12 @@
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView17">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittext_firstName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="@{user.firstName}"
+            android:text="@={user.firstName}"
             android:paddingEnd="10dp"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -109,11 +110,12 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_firstName">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edittext_LastName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="text"
             android:paddingStart="10dp"
-            android:text="@{user.lastName}"
+            android:text="@={user.lastName}"
             android:paddingEnd="10dp"
             android:textColor="@color/black"
             android:textSize="14sp" />
@@ -128,6 +130,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:hint="@string/edt_hint_email"
+        app:boxStrokeErrorColor="@color/Danger_red"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusTopStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -141,11 +144,12 @@
         app:layout_constraintTop_toBottomOf="@id/edt_lastName">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_email"
             android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:layout_width="match_parent"
-            android:text="@{user.email}"
+            android:text="@={user.email}"
             android:layout_height="match_parent"
             android:inputType="textEmailAddress"
             android:textSize="14sp" />
@@ -161,6 +165,7 @@
         android:layout_marginEnd="20dp"
         android:hint="@string/edt_hint_password"
         android:inputType="textPassword"
+        app:boxStrokeErrorColor="@color/Danger_red"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="15dp"
@@ -174,10 +179,11 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editText_password"
             android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
-            android:text="@{user.password}"
+            android:text="@={user.password}"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
@@ -195,6 +201,18 @@
         app:layout_constraintStart_toStartOf="parent"
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+    <TextView
+        android:id="@+id/errorTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password_must_not_contain_special_characters"
+        android:textColor="@color/Danger_red"
+        app:layout_constraintBottom_toTopOf="@+id/btn_SignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password"/>
 
     <TextView
         android:id="@+id/errorTextBlankName"

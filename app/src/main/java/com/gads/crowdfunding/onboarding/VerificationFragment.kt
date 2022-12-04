@@ -27,14 +27,15 @@ class VerificationFragment : Fragment(R.layout.fragment_verification){
             if(onboardingViewModel.isVerififcationMatching()) {
                 startActivity(Intent(view.context, NavhostHomeActivity::class.java))
             }else{
-                binding.edtVerify.isErrorEnabled = true
-                binding.errorTextInvalidVerificationCode?.isVisible = true
+                binding.edtVerify.apply{
+                    error = "Invalid code"
+                    isErrorEnabled = true
+                }
 
                 //For API 28 and above  we are reseting the errors after 10 seconds
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                     Handler.createAsync(Looper.myLooper()!!).postDelayed({
                         binding.edtVerify.isErrorEnabled = false
-                        binding.errorTextInvalidVerificationCode?.isVisible = false
                     }, 10000)
                 }
             }

@@ -13,8 +13,10 @@ class OnboardingViewModel : ViewModel() {
     fun isCredentialsValid(): Boolean {
         //Return true if backend returns true else return false
 
-        return false
+        return true
     }
+
+    fun isFieldsEmpty(): Boolean = email.isBlank() && password.isBlank()
 
 
 
@@ -26,13 +28,28 @@ class OnboardingViewModel : ViewModel() {
     private var name = "$firstName $lastName"
 
 
-    fun isNameBlank(): Boolean =  true //firstName.isBlank() && lastName.isBlank()
+    fun isFirstNameBlank(): Boolean = firstName.isBlank()
 
-    fun isNameCharactersValid(): Boolean{
-       return onlyLetters(name)
+    fun isLastNameBlank(): Boolean = lastName.isBlank()
+
+    fun isNameCharactersValid(): Boolean = onlyLetters(firstName) && onlyLetters(lastName)
+
+    private fun onlyLetters(string: String): Boolean {
+        for (c in string)
+        {
+            if (c !in 'A'..'Z' && c !in 'a'..'z') {
+                return false
+            }
+        }
+        return true
     }
 
-    private fun onlyLetters(s: String): Boolean = (s.firstOrNull { !it.isLetter() } == null)
+    fun isPasswordValid(): Boolean = onlyLetters(password)
+
+    fun isPasswordBlank(): Boolean = password.isBlank()
+
+    fun isEmailBlank(): Boolean = email.isBlank()
+
 
 
 

@@ -64,6 +64,8 @@
     <string name="invalid_credentials">Credentials entered are invalid</string>
     <string name="last_name">Last name</string>
     <string name="names_should_not_contain_any_special_characters">Names should not contain any special characters</string>
-    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="name_cannot_be_empty">Fields cannot be empty</string>
     <string name="invalid_error_code">Invalid error code</string>
+    <string name="password_must_not_contain_special_characters">Password must not contain special characters</string>
+    <string name="fields_cannot_be_empty">Fields cannot be empty</string>
 </resources>
