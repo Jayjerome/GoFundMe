@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.gads.crowdfunding.dashboard.HomeFragment"
+        android:name="com.gads.crowdfunding.presentation.dashboard.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/fundraisingFragment"
-        android:name="com.gads.crowdfunding.dashboard.FundraisingFragment"
+        android:name="com.gads.crowdfunding.presentation.dashboard.FundraisingFragment"
         android:label="FundraisingFragment" >
         <action
             android:id="@+id/action_fundraisingFragment_to_homeFragment"
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/newProjectFragment"
-        android:name="com.gads.crowdfunding.dashboard.NewProjectFragment"
+        android:name="com.gads.crowdfunding.presentation.dashboard.NewProjectFragment"
         android:label="NewProjectFragment" >
         <action
             android:id="@+id/action_newProjectFragment_to_homeFragment"
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/thankYouFragment"
-        android:name="com.gads.crowdfunding.dashboard.ThankYouFragment"
+        android:name="com.gads.crowdfunding.presentation.dashboard.ThankYouFragment"
         android:label="ThankYouFragment" >
         <action
             android:id="@+id/action_thankYouFragment_to_homeFragment"
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.gads.crowdfunding.dashboard.ProfileFragment"
+        android:name="com.gads.crowdfunding.presentation.dashboard.ProfileFragment"
         android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profileFragment_to_homeFragment"
