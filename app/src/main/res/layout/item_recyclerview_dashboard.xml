@@ -122,6 +122,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorPrimary"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="@id/constraintLayout2"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
@@ -131,7 +133,7 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="1dp"
             android:textStyle="bold"
             android:text="@string/days_left"
             app:layout_constraintBottom_toBottomOf="parent"

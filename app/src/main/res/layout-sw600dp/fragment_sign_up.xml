@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="user"
+            type="com.gads.crowdfunding.viewmodel.onboardingviewmodel.OnboardingViewModel" />
+    </data>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -45,10 +52,10 @@
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edt_fullName"
+        android:id="@+id/edt_firstName"
         android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:hint="@string/full_name"
+        android:hint="@string/first_name"
         android:layout_marginTop="30dp"
         android:inputType="text"
         app:boxBackgroundColor="@color/white"
@@ -66,9 +73,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text"
+            android:text="@{user.firstName}"
             android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_lastName"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="@string/last_name"
+        android:inputType="text"
+        app:boxBackgroundColor="@color/white"
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusBottomEnd="15dp"
+        app:boxCornerRadiusBottomStart="15dp"
+        app:boxCornerRadiusTopEnd="15dp"
+        app:boxCornerRadiusTopStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_firstName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:text="@{user.lastName}"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -89,7 +128,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toBottomOf="@id/edt_fullName">
+        app:layout_constraintTop_toBottomOf="@id/edt_lastName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -97,6 +136,7 @@
             android:inputType="textEmailAddress"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:text="@{user.email}"
             android:textColor="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -127,9 +167,34 @@
             android:inputType="textPassword"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:text="@{user.password}"
             android:textColor="@color/black"
             android:textSize="14sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/errorTextContainsSpecialCharacters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/names_should_not_contain_any_special_characters"
+        android:textColor="@color/Danger_red"
+        app:layout_constraintBottom_toTopOf="@+id/btn_SignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+    <TextView
+        android:id="@+id/errorTextBlankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name_cannot_be_empty"
+        android:textColor="@color/Danger_red"
+        app:layout_constraintBottom_toTopOf="@+id/btn_SignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password" />
 
 
     <Button
@@ -181,3 +246,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

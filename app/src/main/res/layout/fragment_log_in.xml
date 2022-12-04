@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="user"
+            type="com.gads.crowdfunding.viewmodel.onboardingviewmodel.OnboardingViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".onboarding.LogInFragment">
+
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -51,6 +61,7 @@
         android:inputType="textEmailAddress"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="outline"
+        app:boxStrokeErrorColor="@color/Danger_red"
         android:layout_marginTop="20dp"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
@@ -67,6 +78,7 @@
             android:textColor="@color/black"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
+            android:text="@{user.email}"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -82,8 +94,8 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:hint="@string/edt_hint_password"
-        app:passwordToggleEnabled="true"
         android:inputType="textPassword"
+        app:boxStrokeErrorColor="@color/Danger_red"
         app:boxBackgroundColor="@color/white"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="15dp"
@@ -93,18 +105,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edt_email">
+        app:layout_constraintTop_toBottomOf="@id/edt_email"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:textSize="14sp"
             android:paddingStart="10dp"
-            android:paddingEnd="10dp"/>
+            android:paddingEnd="10dp"
+            android:text="@{user.password}"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/errorTextInvalidCredentials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/invalid_credentials"
+        android:textColor="@color/Danger_red"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password"
+        app:layout_constraintStart_toStartOf="@+id/edt_password"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/btn_login"
@@ -148,3 +174,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
