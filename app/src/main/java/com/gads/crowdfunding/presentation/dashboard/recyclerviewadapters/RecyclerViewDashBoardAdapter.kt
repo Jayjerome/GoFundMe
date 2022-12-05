@@ -7,20 +7,20 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.gads.crowdfunding.presentation.dashboard.HomeFragmentDirections
-import com.gads.crowdfunding.presentation.dashboard.recyclerviewtypes.TypeCardViewRV
+import com.gads.crowdfunding.presentation.dashboard.recyclerviewtypes.TypeItemDashBoad
 import com.gads.crowdfunding.databinding.ItemRecyclerviewDashboardBinding
 
 class RecyclerViewDashBoardAdapter: RecyclerView.Adapter<RecyclerViewDashBoardAdapter.ViewHolder>() {
     inner class ViewHolder(val binding: ItemRecyclerviewDashboardBinding) : RecyclerView.ViewHolder(binding.root)
 
-    private val diffCallBack = object : DiffUtil.ItemCallback<TypeCardViewRV>(){
-        override fun areItemsTheSame(oldItem: TypeCardViewRV, newItem: TypeCardViewRV): Boolean = (oldItem.id == newItem.id)
-        override fun areContentsTheSame(oldItem: TypeCardViewRV, newItem: TypeCardViewRV): Boolean = (oldItem == newItem)
+    private val diffCallBack = object : DiffUtil.ItemCallback<TypeItemDashBoad>(){
+        override fun areItemsTheSame(oldItem: TypeItemDashBoad, newItem: TypeItemDashBoad): Boolean = (oldItem.id == newItem.id)
+        override fun areContentsTheSame(oldItem: TypeItemDashBoad, newItem: TypeItemDashBoad): Boolean = (oldItem == newItem)
     }
 
     private val differ = AsyncListDiffer(this, diffCallBack)
 
-    var cards : List<TypeCardViewRV>
+    var cards : List<TypeItemDashBoad>
         get() =differ.currentList
         set(value) { differ.submitList(value)}
 

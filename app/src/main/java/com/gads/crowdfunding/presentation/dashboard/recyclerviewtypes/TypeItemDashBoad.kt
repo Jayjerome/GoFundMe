@@ -1,6 +1,6 @@
 package com.gads.crowdfunding.presentation.dashboard.recyclerviewtypes
 
-data class TypeCardViewRV (
+data class TypeItemDashBoad (
     var id : Int,
     var imageId : Int,
     var title : String,

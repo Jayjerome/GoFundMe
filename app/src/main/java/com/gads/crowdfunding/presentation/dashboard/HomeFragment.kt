@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.gads.crowdfunding.R
 import com.gads.crowdfunding.presentation.dashboard.recyclerviewadapters.RecyclerViewDashBoardAdapter
 import com.gads.crowdfunding.presentation.dashboard.recyclerviewtypes.DataManager
-import com.gads.crowdfunding.presentation.dashboard.recyclerviewtypes.TypeCardViewRV
+import com.gads.crowdfunding.presentation.dashboard.recyclerviewtypes.TypeItemDashBoad
 import com.gads.crowdfunding.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -36,7 +36,7 @@ class HomeFragment: Fragment(R.layout.fragment_home) {
     }
 
     private fun setUpRecyclerView() {
-        val cards :ArrayList<TypeCardViewRV> = DataManager.initializeCards()
+        val cards :ArrayList<TypeItemDashBoad> = DataManager.initializeCards()
 
         recyclerViewAdapter.cards = cards
         binding.recyclerViewDashboard.adapter = recyclerViewAdapter

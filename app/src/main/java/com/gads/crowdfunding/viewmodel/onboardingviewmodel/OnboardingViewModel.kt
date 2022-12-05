@@ -3,28 +3,14 @@ package com.gads.crowdfunding.viewmodel.onboardingviewmodel
 import androidx.lifecycle.ViewModel
 
 class OnboardingViewModel : ViewModel() {
-//Login Fragment
-
-    //The email and password are being recorded from the View using Data binding
-    var email = ""
-    var password = ""
-
-
-    fun isCredentialsValid(): Boolean {
-        //Return true if backend returns true else return false
-
-        return true
-    }
-
-    fun isFieldsEmpty(): Boolean = email.isBlank() && password.isBlank()
-
-
-
 
 //SignUp Fragment
 
+    //Updated through databinding in real time
     var firstName = ""
     var lastName = ""
+    var email = ""
+    var password = ""
     private var name = "$firstName $lastName"
 
 
@@ -60,7 +46,7 @@ class OnboardingViewModel : ViewModel() {
     fun isVerififcationMatching(): Boolean{
         //Check matching with generated code from backend
 
-        return false
+        return true
     }
 
 

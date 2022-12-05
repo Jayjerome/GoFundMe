@@ -6,16 +6,16 @@ import com.gads.crowdfunding.R
 object DataManager {
 
 
-     val cards  =  ArrayList<TypeCardViewRV>()
+     val cards  =  ArrayList<TypeItemDashBoad>()
 
     val itemFundraising = ArrayList<TypeItemFundraising>()
 
     val projects = ArrayList<TypeItemProjects>()
 
 
-     fun initializeCards(): ArrayList<TypeCardViewRV> {
+     fun initializeCards(): ArrayList<TypeItemDashBoad> {
 
-        cards.add(0, TypeCardViewRV(0,
+        cards.add(0, TypeItemDashBoad(0,
                             R.drawable.example_image,
                             "Urgently - needed",
                             "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
@@ -23,7 +23,7 @@ object DataManager {
             20000,
             3)
         )
-        cards.add(1, TypeCardViewRV(1,
+        cards.add(1, TypeItemDashBoad(1,
             R.drawable.example_image,
                             "Urgently - needed",
                             "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
@@ -32,7 +32,7 @@ object DataManager {
             3
         )
         )
-        cards.add(2, TypeCardViewRV(2,
+        cards.add(2, TypeItemDashBoad(2,
             R.drawable.example_image,
                             "Urgently - needed",
                             "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
@@ -42,7 +42,7 @@ object DataManager {
             3
         )
         )
-        cards.add(3, TypeCardViewRV(3,
+        cards.add(3, TypeItemDashBoad(3,
             R.drawable.example_image,
                             "Urgently - needed",
                             "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
@@ -51,7 +51,7 @@ object DataManager {
                                3
         )
         )
-        cards.add(4, TypeCardViewRV(4,
+        cards.add(4, TypeItemDashBoad(4,
             R.drawable.example_image,
                             "Urgently - needed",
                             "Urgent! For ophanage children xyz xyx vsdo ivsv sv sdoiv asvois dnvos;div svi; asvoi; asvsdvsdhjvb sdv sdv sidlvsd",
