@@ -1,6 +1,9 @@
 package com.gads.crowdfunding.presentation.onboarding
 
 import android.content.Intent
+import android.os.Bundle
+import android.view.View
+import android.content.Intent
 import android.os.*
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,10 +14,16 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.gads.crowdfunding.R
 import com.gads.crowdfunding.databinding.FragmentLogInBinding
+import com.gads.crowdfunding.domain.auth.LoginModel
+import com.gads.crowdfunding.presentation.dashboard.NavhostHomeActivity
+import com.gads.crowdfunding.util.LoadingUtils
+import com.gads.crowdfunding.util.showToast
+import com.gads.crowdfunding.viewmodels.AuthViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import com.gads.crowdfunding.presentation.dashboard.NavhostHomeActivity
 import com.gads.crowdfunding.viewmodel.onboardingviewmodel.OnboardingViewModel
 
-
+@AndroidEntryPoint
 class LogInFragment : Fragment(R.layout.fragment_log_in) {
     private lateinit var binding: FragmentLogInBinding
     private val onboardingViewModel : OnboardingViewModel by viewModels()
@@ -23,6 +32,14 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         binding = FragmentLogInBinding.bind(view)
+
+        viewModel.loginResponseLiveData.observe(viewLifecycleOwner){
+            if(it.success){
+                startActivity(Intent(view.context, NavhostHomeActivity::class.java))
+            }else{
+                LoadingUtils.hideDialog()
+            }
+        }
 
         binding.emailTextInput.doOnTextChanged { text, start, before, count ->  onboardingViewModel.email = text.toString()}
         binding.editTextPassword.doOnTextChanged { text, start, before, count -> onboardingViewModel.password = text.toString()  }

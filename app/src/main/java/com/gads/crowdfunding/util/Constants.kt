@@ -13,7 +13,7 @@ class Constants {
 
     companion object {
 
-        const val BASE_URL = "https://fintech21.uc.r.appspot.com/"
+        const val BASE_URL = "https://fintech21.uc.r.appspot.com/v1/api/"
 
         const val TAG = "GoFundMe"
 

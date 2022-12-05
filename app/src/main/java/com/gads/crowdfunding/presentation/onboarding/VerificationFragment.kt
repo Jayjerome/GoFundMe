@@ -1,4 +1,4 @@
-package com.gads.crowdfunding.onboarding
+package com.gads.crowdfunding.presentation.onboarding
 
 import android.content.Intent
 import android.os.Build
@@ -10,9 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.gads.crowdfunding.R
 import com.gads.crowdfunding.databinding.FragmentVerificationBinding
+import dagger.hilt.android.AndroidEntryPoint
 import com.gads.crowdfunding.presentation.dashboard.NavhostHomeActivity
 import com.gads.crowdfunding.viewmodel.onboardingviewmodel.OnboardingViewModel
 
+@AndroidEntryPoint
 class VerificationFragment : Fragment(R.layout.fragment_verification){
     private lateinit var binding: FragmentVerificationBinding
     private val onboardingViewModel : OnboardingViewModel by viewModels()

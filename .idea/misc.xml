@@ -61,6 +61,12 @@
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/item_recyclerview_profile.xml" value="0.3136344449134656" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/item_recyclerview_projects.xml" value="0.31765711842667804" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/layout_persistent_bottom_sheet.xml" value="0.38697916666666665" />
+        <entry key="app/src/main/res/layout-sw600dp/loader_ui.xml" value="0.164453125" />
+        <entry key="app/src/main/res/layout/activity_sign_in_log_in.xml" value="0.1537037037037037" />
+        <entry key="app/src/main/res/layout/activity_start_on_boarding.xml" value="0.3365036231884058" />
+        <entry key="app/src/main/res/layout/fragment_log_in.xml" value="0.22644927536231885" />
+        <entry key="app/src/main/res/layout/item_bottom_sheet_onboarding.xml" value="0.3365036231884058" />
+        <entry key="app/src/main/res/layout/loader_ui.xml" value="0.39739583333333334" />
       </map>
     </option>
   </component>

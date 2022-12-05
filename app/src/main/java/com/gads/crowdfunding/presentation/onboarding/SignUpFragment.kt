@@ -13,9 +13,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.gads.crowdfunding.R
 import com.gads.crowdfunding.databinding.FragmentSignUpBinding
+import dagger.hilt.android.AndroidEntryPoint
 import com.gads.crowdfunding.viewmodel.onboardingviewmodel.OnboardingViewModel
 
-
+@AndroidEntryPoint
 class SignUpFragment : Fragment(R.layout.fragment_sign_up){
     private lateinit var binding: FragmentSignUpBinding
     private val onboardingViewModel : OnboardingViewModel by viewModels()
