@@ -26,8 +26,6 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
 
         binding = FragmentLogInBinding.bind(view)
 
-
-
         binding.emailTextInput.doOnTextChanged { text, start, before, count ->
             viewModel.email = text.toString()
         }
@@ -57,6 +55,7 @@ class LogInFragment : Fragment(R.layout.fragment_log_in) {
                     }, 10000)
                 }
             } else {
+                startActivity(Intent(view.context, NavhostHomeActivity::class.java))
                 viewModel.loginResponseLiveData.observe(viewLifecycleOwner) {
                     if (it.success) {
                         Log.i(TAG, "Credentials are valid")

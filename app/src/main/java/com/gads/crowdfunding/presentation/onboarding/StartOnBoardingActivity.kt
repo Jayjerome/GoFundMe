@@ -12,7 +12,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class StartOnBoardingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityStartOnBoardingBinding
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

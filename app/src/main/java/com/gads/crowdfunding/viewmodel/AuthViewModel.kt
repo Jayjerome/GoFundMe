@@ -26,7 +26,6 @@ class AuthViewModel @Inject constructor(
     var email = ""
     var password = ""
 
-
     fun isFieldsEmpty(): Boolean = email.isBlank() && password.isBlank()
 
     private var _loginResponse = MutableLiveData<AuthNetworkResponse>()
