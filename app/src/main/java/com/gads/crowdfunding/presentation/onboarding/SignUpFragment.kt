@@ -73,48 +73,9 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up){
                         }, 10000)
                     }
                 }else {
-                    //Check whether the characters are letters
-                    if (onboardingViewModel.isNameCharactersValid()) {
-                        if (onboardingViewModel.isPasswordValid()) {
-                            Log.i(TAG, "Sign up successful")
-                            findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
-                        } else {
-                            binding.errorTextPassword.isVisible = true
-                            binding.edtPassword.apply {
-                                error = "Password has special characters"
-                                isErrorEnabled = true
-                            }
-                            //For API 28 and above  we are reseting the errors after 10 seconds
-                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                                Handler.createAsync(Looper.myLooper()!!).postDelayed({
-                                    binding.edtPassword.isErrorEnabled = false
-                                }, 10000)
-                            }
+                    Log.i(TAG, "Sign up successful")
+                    findNavController().navigate(R.id.action_signUpFragment_to_verificationFragment)
 
-                        }
-                    } else {
-                        Log.e(TAG, "Names and password have special characters in them")
-
-                        //Show an error message and enable errors for the textInputLayout
-                        binding.errorTextContainsSpecialCharacters.isVisible = true
-                        binding.edtFirstName.apply {
-                            error = "Invalid First name"
-                            isErrorEnabled = true
-                        }
-                        binding.edtLastName.apply {
-                            error = "Invalid Last name"
-                            isErrorEnabled = true
-                        }
-
-                        //For API 28 and above  we are reseting the errors after 10 seconds
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                            Handler.createAsync(Looper.myLooper()!!).postDelayed({
-                                binding.errorTextContainsSpecialCharacters.isVisible = false
-                                binding.edtFirstName.isErrorEnabled = false
-                                binding.edtLastName.isErrorEnabled = false
-                            }, 10000)
-                        }
-                    }
                 }
             }
 
