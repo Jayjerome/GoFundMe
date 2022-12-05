@@ -8,7 +8,7 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
 
@@ -55,7 +55,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/frag_fundraising_btn_donate">
 
@@ -80,12 +80,12 @@
                                 android:id="@+id/imageView_fragment_fundraising"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:contentDescription="@string/fundraising_image"
                                 android:scaleType="fitXY"
                                 android:src="@drawable/example_image3"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toTopOf="parent"
-                                android:contentDescription="@string/fundraising_image" />
+                                app:layout_constraintTop_toTopOf="parent" />
 
                             <androidx.appcompat.widget.AppCompatTextView
                                 android:id="@+id/tv_time_left"
@@ -136,7 +136,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="35dp"
                         android:layout_marginEnd="20dp"
-                        android:text="@string/bottom_sheet_description"
+                        android:text="Lorem ipsum dolor sit amet. Est repellat beatae non repudiandae deserunt sed deleniti similique rem tempora amet. Est aliquam aliquid et neque facilis id excepturi praesentium non voluptatibus enim aut esse galisum ut suscipit quidem? Aut placeat voluptatem 33 odit galisum a veniam blanditiis et corporis velit eos numquam accusamus. In repellendus voluptas id quisquam reprehenderit ut fuga rerum qui commodi veritatis sed natus ratione non error commodi rem dolorem enim."
                         android:textColor="@color/colorPrimary" />
 
 

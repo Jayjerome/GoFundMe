@@ -34,6 +34,7 @@
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout-sw600dp/item_recyclerview_dashboard.xml" value="0.29449068569163694" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout-sw600dp/item_recyclerview_fundraising.xml" value="0.29449068569163694" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout-sw600dp/item_recyclerview_projects.xml" value="0.29449068569163694" />
+        <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout-sw600dp/loader_ui.xml" value="0.19348958333333333" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/activity_home.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/activity_nav_host_home.xml" value="0.31765711842667804" />
@@ -61,6 +62,7 @@
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/item_recyclerview_profile.xml" value="0.3136344449134656" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/item_recyclerview_projects.xml" value="0.31765711842667804" />
         <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/layout_persistent_bottom_sheet.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/PC/GoFundMe/app/src/main/res/layout/loader_ui.xml" value="0.31765711842667804" />
         <entry key="app/src/main/res/layout-sw600dp/loader_ui.xml" value="0.164453125" />
         <entry key="app/src/main/res/layout/activity_sign_in_log_in.xml" value="0.1537037037037037" />
         <entry key="app/src/main/res/layout/activity_start_on_boarding.xml" value="0.3365036231884058" />

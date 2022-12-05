@@ -121,7 +121,7 @@
             android:layout_width="500dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:text="Your contribution to the welfare of this community would go a long way.......Your contribution to the welfare of this community would go a long way....... Your contribution to the welfare of this community would go a long way......."
+            android:text="Thank you for your generous gift to our Orphanage. We are thrilled to have your support. Through your donation we have been able to accomplish our goal and continue working towards the purpose of organization. You truly make the difference for us, and we are extremely grateful!"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toStartOf="@+id/guideline8"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
